@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    font-weight:700;
+}
+*::selection
+{
+    background-color: #ff0157;
+    color: #ffffff;
+}
+body
+{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transition: 0.5s;
+}
+.dark-mode
+{
+    /* border-color: #434242; */
+    background-color: #192734;
+    color: white;
+}
+.first .firstp
+{
+    font-weight: 300;
+    color: #ffffff;
+}
+script
+{
+    background: #ffffff;
+}
+.DarkB
+{
+    position: fixed;
+    color: #fffcfd;
+    height: 40px;
+    width: 40px;
+    background: url('images/icons/darkmode.png');
+    border-radius: 10px;
+    border: 2px #ffffff;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #302f2f;
+    background-size: cover;
+    cursor: pointer;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.558);
+}
+
+.dark-mode-light
+{
+    position: fixed;
+    color: #fffcfd;
+    height: 40px;
+    width: 40px;
+    background: url('images/icons/light-mode.png');
+    border-radius: 10px;
+    border: 2px #ffffff;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    background-size: cover;
+    cursor: pointer;
+    
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.558);
+}
+
+.index
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/login index background image dark.jpg');
+    background-size: cover;
+    transition: 0.5s;
+    /* user-select: none; */
+    
+}
+.DarkIndex
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/index background image.jpg');
+    background-size: cover;
+    /* user-select: none; */
+}
+.index .first
+{
+    max-width: 900px;
+    text-align: center;
+}
+.index .first h2
+{
+    font-size: 5em;
+    color: #ffffff;
+    text-shadow: 1px 1px 100px rgb(2, 2, 2), 0 0 55px rgb(0, 0, 0), 0 0 50px rgb(0, 0, 0);
+    background-color: rgba(255, 223, 223, 0);
+}
+.index .first p
+{
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 1px 1px 100px black, 0 0 55px rgb(0, 0, 0), 0 0 50px rgb(0, 0, 0);
+    background-color: rgba(4, 4, 4, 0);
+}
+.lrm
+{
+    font-size: 1em;
+    color: #ffffff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+.lrm:hover
+{
+    letter-spacing: 6px;
+}
+header
+{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    padding: 10px 100px;
+    z-index: 1000;
+    display: flex;
+    min-width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.756)
+}
+header .logo
+{
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+header .logo span
+{
+    color: #ff0158;
+}
+header .navigation
+{
+    position: relative;
+    display: flex;
+}
+header .navigation li
+{
+    list-style: none;
+    margin-left: 30px;
+    user-select: none;
+}
+header .navigation li a
+{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+header .navigation li a:hover
+{
+    color: #ff0157;
+}
+header .navigation li .join_icon
+{
+    border: 8px solid rgb(23, 223, 30);
+    border-radius: 20px;
+    background-color: rgb(23, 223, 30);
+    transition: 0.1s;
+}
+header .navigation li .join_icon:hover
+{
+    color: rgb(23, 223, 30);
+    border: 8px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+section
+{
+    padding: 100px;
+    transition: 0.2s;
+    /* min-height: 100vh; */
+}
+/* .about
+{
+    min-height: 100vh;
+} */
+.second
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.second .second1
+{
+    position: relative;
+    width: 48%;
+}
+.secondh
+{
+    color:black;
+    font-size: 2em;
+    font-weight: 300;
+    user-select: none;
+}
+.dark-mode-secondh
+{
+    color: #ffffff;
+}
+.dark-mode-border
+{
+    color: white;
+    border: 15px solid rgb(0, 0, 0);
+    box-shadow: 0px 5px 35px rgb(255, 255, 255);
+}
+.secondh span
+{
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 2em;
+}
+.second .second1 .secondi
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.second .second1 .secondi img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.title
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.menu .content
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.menu .content .box
+{
+    width: 250px;
+    height: 300px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ffffff;
+    /* padding: 10px; */
+    border: 15px solid rgb(255, 252, 252);
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.558);
+    transition: 0.5s;
+    border-radius: 5px;
+}
+.menu .content .box:hover
+{
+    width: 260px;
+    height: 310px; 
+}
+.menu .content .box .secondi
+{
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+.menu .content .box .secondi img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.menu .content .box .text
+{
+    padding: 15px 0 5px;
+    text-align: center;
+    font-size: 1.5em;
+}
+.menu .content .box:hover
+{
+    padding: 15px 0 5px;
+    text-align: center;
+    font-size: 1.1em;
+    transition: 0.5s;
+}
+.menu .content .box .text h3
+{
+    font-weight: 400;
+    color: #111;
+}
+.faculty p
+{
+    font-weight: 700;
+}
+.faculty .content
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 40px;
+}
+.faculty .content .box
+{
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 250px;
+    height: 360px;
+    margin: 15px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.558);
+    transition: 0.5s;
+}
+.faculty .content .box:hover
+{
+    width: 270px;
+    height: 370px;
+    margin: 15px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.299);
+    font-size: 1.2em;
+}
+.faculty .content .box .secondi
+{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.faculty .content .box .secondi img
+{
+    border-radius: 5px 5px 0px 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.faculty .content .box .text
+{
+    padding: 15px 0 5px;
+    text-align: center;
+    /* transition: 0.5s; */
+}
+.faculty .content .box .text h3
+{
+    font-weight: 400;
+    color: #111;
+}
+.student
+{
+    /* background: url('images/index background image.jpg'); */
+    min-height: 100vh;
+}
+
+.student .title .secondh
+{
+    /* color:rgb(253, 252, 252); */
+    font-size: 2em;
+    font-weight: 300;
+    user-select: none;
+}
+.student .content
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 40px;
+}
+.student .content .box
+{
+    width: 250px;
+    height: 460px;
+    margin: 15px;
+    background: white;
+    color: #000000;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.558);;
+    transition: 0.5s;
+}
+.student .content .box .secondi
+{
+    position: relative;
+    width: 100%;
+    height: 260px;
+}
+.student .content .box .secondi img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.student .content .box .text
+{
+    padding: 15px 0 5px;
+    text-align: center;
+    /* transition: 0.5s; */
+}
+.Stext
+{
+    font-weight: 400;
+}
+.student .content .box .text h3
+{
+    font-size: 1.em;
+    font-weight: 500;
+    color: #111;
+}
+.col1
+{
+    /* color: #ffffff; */
+    font-weight: 600;
+}
+
+.loginbox
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: url('images/index background image.jpg');
+    display: flex;
+}
+.LBox
+{
+    height: 470px;
+    width: 350px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 55px rgb(0, 0, 0), 0 0 50px rgb(0, 0, 0);
+    /* background-color: rgba(255, 223, 223, 0); */
+}
+.darkLBox
+{
+    height: 470px;
+    width: 350px;
+    border-radius: 15px;
+    background-color: #192734;
+    box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 55px rgb(0, 0, 0), 0 0 50px rgb(0, 0, 0);
+}
+.SignTi
+{
+    font-size: 2em;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+
+}
+.LBox .SignTi span
+{
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.LForm
+{
+    padding-top: 0px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    /* background-color: #ff0157; */
+}
+/* Yinputs
+{
+    height: 35px;
+    border-radius: 20px;
+    border-width: 1.5px;
+    padding: 10px;
+    border-color: #b1afb0;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
+    outline: none;
+    
+}
+Yinputs:focus
+{
+    background-color: #ffffff;
+    border-color: #ff0157;
+    outline: none;
+    border-width: 2px;
+    
+}
+
+YinputId
+{
+    height: 35px;
+    width: 100%;
+    border-radius: 20px;
+    border-width: 1.5px;
+    border-color: #b1afb0;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
+    outline: none;
+    
+}
+YinputPass
+{
+
+    height: 35px;
+} */
+
+
+.LText
+{
+    margin-left: 10px;
+    font-size: 1.1em;
+    font-weight: 400;
+    transition: 0.2s;
+}
+.YinputId
+{
+    height:40px;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 0.95em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.YinputId:focus
+{
+    background-color: #ffffff;
+    border: 2px solid #ff0157;
+    outline: none;
+}
+.YinputPass
+{
+    height: 40px;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 0px 30px 0px 15px;
+    font-size: 0.95em;
+    font-weight: 500;
+    outline: none;
+}
+.YinputPassWrong
+{
+    border: 2px solid #ff5601;
+}
+.LTextP
+{
+    color: #ff5601;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+.YinputPass:focus
+{
+    background-color: #ffffff;
+    border: 2px solid #ff0157;
+}
+#checkP
+{
+    position: fixed;
+    margin-top: 12px;
+    margin-left: 5px;
+    z-index: 1000;
+    height: 15px;
+    width: 15px;
+    accent-color: #ff0157;
+}
+.passAl
+{
+    height: 35px;
+    width: 100%;
+    font-size: 0.8em;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-top: 10px;
+    line-height: 12px;
+}
+.LCheckbox
+{
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: #484647;
+    font-weight: 500;
+}
+#checkTC
+{
+    accent-color: #ff0157;
+}
+.submitB
+{
+    margin-top: 10px;
+    height: 40px;
+    width: 100%;
+    border-radius: 50px;
+    border-width: 1px;
+    background-color: #ff0157;
+    border-width: 0px;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+.submitBL
+{
+    margin-top: 10px;
+    height: 40px;
+    width: 100%;
+    border-radius: 50px;
+    border-width: 2px;
+    border-color: #ff0157;
+    background-color: #fffcfd;
+    color:#ff0157;
+    font-size: 1.1em;
+}
+#gSignInWrapper
+{
+    padding-left: 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    display: flex;
+}
+#customBtn 
+{
+    margin-top: 0px;
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 1000px;
+    background: url('images/icons/Google-Logo-Transparent-Background.png');
+    background-size: cover;
+    
+}
+#customBtn:hover 
+{
+    cursor: pointer;
+}
+.HtmlC .HVideo
+{
+    margin-top: 200px;
+}
