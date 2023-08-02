@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Login Page
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="images\title logo.png">
+        <script src="https://apis.google.com/js/api:client.js"></script>
+        <!-- <script src="dark-mode.js"></script> -->
+        <script>
+        let googleUser = {};
+        let startApp = function() {
+            gapi.load('auth2', function(){
+            
+            auth2 = gapi.auth2.init({
+                client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+                cookiepolicy: 'single_host_origin',
+            });
+            attachSignin(document.getElementById('customBtn'));
+            });
+        };
+
+        function attachSignin(element) {
+            console.log(element.id);
+            auth2.attachClickHandler(element, {},
+                function(googleUser) {
+                document.getElementById('name').innerText = "Signed in: " +
+                    googleUser.getBasicProfile().getName();
+                }, function(error) {
+                //   alert(JSON.stringify(error, undefined, 2));
+                });
+        }
+        </script>
+        
+    </head>
+    <body>
+        <header>
+            <a href="css page.html" class="logo">Pranshu<span>.</span></a>
+            <ul class="navigation">
+                <li><a href="css page.html#index"><big> Home</big></a></li>
+                <li><a href="css page.html#about"><big> About</big></a></li>
+                <li><a href="css page.html#menu"><big> Menu</big></a></li>
+                <li><a href="css page.html#faculty"><big> Faculty</big></a></li>
+                <li><a href="css page.html#contect"><big> Contect</big></a></li>
+
+            </ul>
+        </header>
+        <!-- <button class="DarkB"  id="imgClickAndChange" onclick="DarkMode()"></button> -->
+
+        <div class="loginbox">
+            <div class="LBox" id="LBox">
+                <h2 class="SignTi"><span>S</span>ign&nbsp;<big>U</big>p</h2>
+                <form action="" class="LForm">
+                    <label for="email" class="LText">Mail Id</label><br>
+                    <input class="YinputId" type="text" id="lname" name="lname" onfocus="this.placeholder=''" onblur="this.placeholder='xyz@xmail.com'" placeholder="xyz@xmail.com" required><br>
+                    <label for="password" class="LText" id="LTextP">Password</label><br>
+                    <input class="YinputPass" type="password" id="password" onfocus="this.placeholder=''" onblur="this.placeholder='@#/Ab13'" placeholder="@#/Ab13" required >
+                    <input id="checkP"type="checkbox">
+                    <span class="checkmark"></span><br>
+                    <p id="demo12" class="passAl"></p>
+                    <div class="LCheckbox">
+                        <input type="checkbox" id="checkTC" checked> I read all <a href="" class="T&C">term & condition</a>.
+                    </div>
+                    <input class="submitB" type="submit" value="Sign Up" onclick="checkPasswordStrength()">
+                    <input class="submitBL" type="submit" value="Already have a account">
+                    <div id="gSignInWrapper">
+                        Login With:
+                        <div id="customBtn" class="customGPlusSignIn"></div>
+                      </div>
+                      <div id="name"></div>
+                      <script>startApp();</script>
+                </form>
+            </div>
+        </div>
+
+        <script>
+
+            checkP.onclick= togglePassword;
+
+            function togglePassword()
+            {
+                if(checkP.checked) password.type = "text";
+                else password.type = "password";
+            }
+
+
+            function checkPasswordStrength() {
+            let passwordInput = document.getElementById("password").value;
+            let strengthText = document.getElementById("password-strength");
+
+            // Define regular expressions for each strength criteria
+            let uppercaseRegex = /[A-Z]/;
+            let lowercaseRegex = /[a-z]/;
+            let numberRegex = /[0-9]/;
+            // let specialCharRegex = /[!@#$%^&*()_+[\]{};':"\\|,.<>?]/;
+            let lengthRequirement = passwordInput.length >= 8;
+
+            if (lengthRequirement && uppercaseRegex.test(passwordInput) && lowercaseRegex.test(passwordInput) && numberRegex.test(passwordInput) && specialCharRegex.test(passwordInput)) {
+                // strengthText.innerHTML = "Strong password!";
+                document.getElementById("demo12").style.color = "#02bb0e";
+                document.getElementById("demo12").innerHTML="Strong password!";
+                event.preventDefault();
+            } 
+            else {
+                // alert('Weak password! It should have at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character.');
+                // strengthText.innerHTML = "Weak password! It should have at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character.";
+                document.getElementById("demo12").style.color = "#ff5601c3";
+                let elementYinputPassW = document.getElementById("password");
+                elementYinputPassW.classList.toggle("YinputPassWrong");
+                let elementYTPassW = document.getElementById("LTextP");
+                elementYTPassW.classList.toggle("LTextP");
+                document.getElementById("demo12").innerHTML="*It should have at least 8 characters, &nbsp;&nbsp;uppercase, lowercase, number, special &nbsp;&nbsp;&nbsp;character.";
+                event.preventDefault();
+            }
+        }
+        </script>
+    </body>
+</html>
