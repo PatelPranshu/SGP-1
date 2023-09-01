@@ -1,81 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style2.css"> -->
-    <title>Document</title>
-    <link rel="icon" type="image/png" href="images\title logo.png">
-    <style>
+    <head>
+        
+        <!-- <link href="style.css" rel="stylesheet"> -->
+        <!-- <link rel="stylesheet" href="style2.css"> -->
+        <title>Document</title>
+        <link rel="icon" type="image/png" href="images\title logo.png">
+        <style>
             @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-*
-{
-    font-family: 'poppins';
-    font-size: 1.3em;
-}
-body
-{
-    position: absolute;
-    top: 20px;
-    justify-content: center;
-    align-items: center;
-    /* padding: 50%; */
-    background: rgb(255, 255, 255);
-}
-.container{
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    top: 300px;
-    left: 550px;
-}
-.circle{
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    margin: 5px;
-    background: rgb(255, 253, 253);
-    animation: loader .6s ease-in-out infinite;
-}
-.circle:nth-child(1){
-    animation-delay: .1s;
-    background: #ff0157;
-}
-.circle:nth-child(2){
-    animation-delay: .2s;
-    background: #ff0157;
-}
-.circle:nth-child(3){
-    animation-delay: .3s;
-    background: #ff0157;
-}
-@keyframes loader
-{
-    0%{
-        transform: translate(0px,0px);
-    }
-    50%{
-        transform: translate(0px,-60px);
-    }
-    100%{
-        transform: translate(0px,0px);
-    }
-}
-#container2
-{
-    color: white;
-}
-.text1
-{
-    width: 300px;
-    margin-top: 420px;
-    margin-left: 600px;
-}
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+                scroll-behavior: smooth;
+                font-weight:700;
+            }
+            body
+            {
+                background-color: #252323;
+            }
+            .custom-loader {
+                position: fixed;
+                z-index: 1000;
+                margin: 0px;
+                width:100%;
+                height:1vh;
+                background:
+                repeating-linear-gradient(135deg,#ff0157 0 10px,#ff0157 0 20px) left/0% 100%   no-repeat,
+                repeating-linear-gradient(135deg,#766df400    0 10px,#766df400    0 20px) left/100% 100%;
+                animation:p3 5s infinite;
+             }
+             @keyframes p3 {
+                 100% {background-size:100% 100%}
+             }
+            header
+            {
+                position: fixed;
+                width: 100%;
+                top: 0px;
+                left: 0px;
+                padding: 10px 100px;
+                /* padding-left: 100px; */
+                /* z-index: 1000; */
+                display: flex;
+                min-width: 50%;
+                justify-content: space-between;
+                align-items: center;
+                /* transition: 0.5s; */
+                background-color: rgba(0, 0, 0, 0.756)
+            }
+            header .logo
+            {
+                color: white;
+                font-weight: 700;
+                font-size: 2em;
+                text-decoration: none;
+            }
+            header .logo span
+            {
+                color: #ff0158;
+            }
+            header .navigation
+            {
+                position: relative;
+                display: flex;
+            }
+            header .navigation li
+            {
+                list-style: none;
+                margin-left: 30px;
+                user-select: none;
+            }
+            header .navigation li a
+            {
+                text-decoration: none;
+                color: white;
+                font-weight: 300;
+            }
+            header .navigation li a:hover
+            {
+                color: #ff0157;
+            }
+            header .navigation li .join_icon
+            {
+                border: 8px solid rgb(23, 223, 30);
+                border-radius: 20px;
+                background-color: rgb(23, 223, 30);
+                transition: 0.1s;
+            }
+            header .navigation li .join_icon:hover
+            {
+                color: rgb(23, 223, 30);
+                border: 8px solid rgb(255, 255, 255);
+                border-radius: 20px;
+                background-color: rgb(255, 255, 255);
+            }
+            .loginbox
+            {
+                /* position: fixed; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                /* width: 100vw; */
+                /* background: url('images/index background image.jpg'); */
+                
+            }
+            .LBox
+            {
+                display:block;
+                justify-content: center;
+                /* width: 24%; */
+                width: 350px;
+                height: 490px;
+                border-radius: 15px;
+                background-color: rgb(71, 70, 70);
+                /* box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 55px rgb(0, 0, 0), 0 0 50px rgb(0, 0, 0); */
+                /* background-color: rgba(255, 223, 223, 0); */
+            }
+            .BlineT
+            {
+                height: 70px;
+                margin: 4% 5% 0 28%;
+                border-radius: 100px;
+                width: 40%;
+                background-color: #252323;
+            }
+            .Bline1
+            {
+                height: 45px;
+                margin: 15% 5% 0 7%;
+                border-radius: 100px;
+                width: 85%;
+                background-color: #252323;
+            }
+            .Bline2
+            {
+                height: 45px;
+                margin: 10% 0 0 7%;
+                border-radius: 100px;
+                width: 80%;
+                background-color: #252323;
+            }
+            .Bline3
+            {
+                height: 45px;
+                margin: 22% 5% 0 10%;
+                border-radius: 100px;
+                width: 80%;
+                background-color: #252323;
+            }
+            .Bline4
+            {
+
+                height: 45px;
+                margin: 5% 5% 0 10%;
+                border-radius: 100px;
+                width: 80%;
+                background-color: #252323;
+            }
+            footer .container{
+                max-width: 1170px;
+                margin:auto;
+            }
+            footer .row{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            footer ul{
+                list-style: none;
+            }
+            .footer{
+                height: 50vh;
+                background-color: #24262b;
+                padding: 1px 0;
+                padding-top: 70px;
+            }
+            .footer-col{
+                width: 25%;
+                padding: 0 15px;
+            }
+            .footer-col h4{
+                font-size: 18px;
+                color: #ffffff;
+                text-transform: capitalize;
+                margin-bottom: 35px;
+                font-weight: 500;
+                position: relative;
+            }
+            .footer-col h4::before{
+                content: '';
+                position: absolute;
+                left:0;
+                bottom: -10px;
+                background-color: #ff0157;
+                height: 2px;
+                box-sizing: border-box;
+                width: 50px;
+            }
+            .footer-col ul li:not(:last-child){
+                margin-bottom: 10px;
+            }
+            .footer-col ul li a{
+                font-size: 16px;
+                text-transform: capitalize;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 300;
+                color: #bbbbbb;
+                display: block;
+                transition: all 0.3s ease;
+            }
+            .footer-col ul li a:hover{
+                color: #ffffff;
+                padding-left: 8px;
+            }
+            .footer-col .social-links a{
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                background-color: rgba(255,255,255,0.2);
+                margin:0 10px 10px 0;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 50%;
+                color: #ffffff;
+                transition: all 0.5s ease;
+            }
+            .footer-col .social-links a:hover{
+                color: #24262b;
+                background-color: #ffffff;
+            }
+
+            @media(max-width: 767px){
+                .footer-col{
+                width: 50%;
+                margin-bottom: 30px;
+            }
+            }
+            @media(max-width: 574px){
+                .footer-col{
+                width: 100%;
+            }
+            }
+            .footer p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                height: 30%;
+                margin-top: 15px;
+                font-size: 1rem;
+                font-weight: 300;
+                /* background-color: #bbbbbb; */
+            }
     </style>
     
 </head>
 <body>
+    <header>
+        <a href="css page.html" class="logo">Web Learning<span>.</span></a>
+        <ul class="navigation">
+            <li><a href="css page.html#index"><big> Home</big></a></li>
+            <li><a href="css page.html#about"><big> About</big></a></li>
+            <li><a href="css page.html#menu"><big> Menu</big></a></li>
+            <li><a href="css page.html#faculty"><big> Faculty</big></a></li>
+            <li><a href="css page.html#contect"><big> Contect</big></a></li>
+            <li><a href="login timer.html" class="join_icon" id="Hloader"><big> Join</big></a></li>
+        </ul>
+    </header>
+
     <script>
         setTimeout(function()
         {
@@ -88,16 +284,65 @@ body
                     executed = true;
                 }
             };
-        }, 2000);
+        }, 5000);
     </script>
-
+    
     <script src="dark-mode.js"></script>
     
-    <div class="container">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
+    <div class="custom-loader"></div>
+    <div class="loginbox">
+        <div class="LBox" id="LBox">
+            <div class="BlineT"></div>
+            <div class="Bline1"></div>
+            <div class="Bline2"></div>
+            <div class="Bline3"></div>
+            <div class="Bline4"></div>
+        </div>
     </div>
-    <div class="text1">Please Wait...</div>
+
+    <footer class="footer">
+        <div class="container">
+         <div class="row">
+           <div class="footer-col">
+             <h4>company</h4>
+             <ul>
+               <li><a href="#about">about us</a></li>
+               <li><a href="">our services</a></li>
+               <li><a href="">privacy policy</a></li>
+               <li><a href="l">affiliate program</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>get help</h4>
+             <ul>
+               <li><a href="">FAQ</a></li>
+               <!-- <li><a href="">shipping</a></li> -->
+               <li><a href="login timer.html">cancellation</a></li>
+               <li><a href="login timer.html">order status</a></li>
+               <li><a href="login timer.html">payment options</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>online courses</h4>
+             <ul>
+               <li><a href="#menu">watch all</a></li>
+               <li><a href="#menu">HTML</a></li>
+               <li><a href="#menu">CSS</a></li>
+               <li><a href="#menu">Javascript</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>follow us</h4>
+             <div class="social-links">
+               <a href=""></a>
+               <a href=""></a>
+               <a href=""></a>
+               <a href=""></a>
+             </div>
+           </div>
+         </div>
+        </div>
+        <p>&copy;2021 Web Learning | All Rights Reserved</p>
+     </footer>
 </body>
 </html>

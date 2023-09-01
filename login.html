@@ -36,14 +36,14 @@
     </head>
     <body>
         <header>
-            <a href="css page.html" class="logo">Pranshu<span>.</span></a>
+            <a href="css page.html" class="logo">Web Learning<span>.</span></a>
             <ul class="navigation">
                 <li><a href="css page.html#index"><big> Home</big></a></li>
                 <li><a href="css page.html#about"><big> About</big></a></li>
                 <li><a href="css page.html#menu"><big> Menu</big></a></li>
                 <li><a href="css page.html#faculty"><big> Faculty</big></a></li>
                 <li><a href="css page.html#contect"><big> Contect</big></a></li>
-
+                
             </ul>
         </header>
         <!-- <button class="DarkB"  id="imgClickAndChange" onclick="DarkMode()"></button> -->
@@ -74,6 +74,51 @@
             </div>
         </div>
 
+        <footer class="footer">
+            <div class="container">
+             <div class="row">
+               <div class="footer-col">
+                 <h4>company</h4>
+                 <ul>
+                   <li><a href="#about">about us</a></li>
+                   <li><a href="">our services</a></li>
+                   <li><a href="">privacy policy</a></li>
+                   <li><a href="l">affiliate program</a></li>
+                 </ul>
+               </div>
+               <div class="footer-col">
+                 <h4>get help</h4>
+                 <ul>
+                   <li><a href="">FAQ</a></li>
+                   <!-- <li><a href="">shipping</a></li> -->
+                   <li><a href="login timer.html">cancellation</a></li>
+                   <li><a href="login timer.html">order status</a></li>
+                   <li><a href="login timer.html">payment options</a></li>
+                 </ul>
+               </div>
+               <div class="footer-col">
+                 <h4>online courses</h4>
+                 <ul>
+                   <li><a href="#menu">watch all</a></li>
+                   <li><a href="#menu">HTML</a></li>
+                   <li><a href="#menu">CSS</a></li>
+                   <li><a href="#menu">Javascript</a></li>
+                 </ul>
+               </div>
+               <div class="footer-col">
+                 <h4>follow us</h4>
+                 <div class="social-links">
+                   <a href=""></a>
+                   <a href=""></a>
+                   <a href=""></a>
+                   <a href=""></a>
+                 </div>
+               </div>
+             </div>
+            </div>
+            <p>&copy;2021 Web Learning | All Rights Reserved</p>
+         </footer>
+
         <script>
 
             checkP.onclick= togglePassword;
@@ -93,13 +138,14 @@
             let uppercaseRegex = /[A-Z]/;
             let lowercaseRegex = /[a-z]/;
             let numberRegex = /[0-9]/;
-            // let specialCharRegex = /[!@#$%^&*()_+[\]{};':"\\|,.<>?]/;
+            let specialCharRegex = /[!@#$%^&*()_+[\]{};':"\\|,.<>?]/;
             let lengthRequirement = passwordInput.length >= 8;
 
             if (lengthRequirement && uppercaseRegex.test(passwordInput) && lowercaseRegex.test(passwordInput) && numberRegex.test(passwordInput) && specialCharRegex.test(passwordInput)) {
                 // strengthText.innerHTML = "Strong password!";
                 document.getElementById("demo12").style.color = "#02bb0e";
                 document.getElementById("demo12").innerHTML="Strong password!";
+                window.location.href = 'menu course.html';
                 event.preventDefault();
             } 
             else {
